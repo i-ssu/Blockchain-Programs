@@ -1,20 +1,63 @@
-Program 1: Initializing a variable and getting a value from user
+# website: https://buildmedia.readthedocs.org/media/pdf/solidity/develop/solidity.pdf
 
-#Simple Smart Contract
+Solidity:
 
-pragma solidity ^0.4.7;
+#Primary features:
+==> Object Oriented
+==>High level language for implementing smart contracts
+==>Curly bracket {...} language
+==>Influenced by C++, Python, Javascript
+==>Designed to target Ethereum Virtual Machines (EVM)
+
+#Secondary features:
+==>Typically typed
+==>Supports inheritance, libraries and User defined types
+
+#Applications of Solidity:
+To create smart contracts for:-
+==> Votings
+==> Crowdfundings
+==> Blind Auctions
+==> Multi signature Wallets
+
+@1. Understand the Smart Contract Basics:
+Introduction to smart contracts:
+==> A simple example of smart contract written in Solidity
+==> Blockchain basics
+==> The Ethereum Virtual Machine
+
+@2. Get to know Solidity
+==> Solidity by Examples
+==> Language Descriptions
+............................Understand the core concepts of Solidity language
+
+@3. Install the Solidity Compiler
+
+What are smart contracts?
+==>Programs that governs the behaviour of accounts within the Ethereum state
+
+
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.11;
+
 contract Simple_Contract 
 {
-	uint var;
+
+    uint var1;
+
 	function set(uint x) public 
 	{ 
-		var=x;
+		var1=x;
 	}
-	function get(uint x) public
+
+	function get() public view returns (uint)
 	{
-		return x;
+		return var1;
 	}
+
 }
 
-	
+#What is Spdx license identifier MIT?
+SPDX License Identifiers can be used to indicate relevant license information at any level, from package to the source code file level. Accurately identifying the license for open source software is important for license compliance
 
