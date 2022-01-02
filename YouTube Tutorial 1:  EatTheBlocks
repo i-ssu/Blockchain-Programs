@@ -1,0 +1,48 @@
+#Tutorial name/'link': https://www.youtube.com/watch?v=yzcp594R92c&list=PLbbtODcOYIoE0D6fschNU4rqtGFRpk3ea&index=3
+
+#Video 1:
+Solidity Tutorial: Introduction
+
+#Video 2:
+Solidity Tutorial: Remix IDE (new layout)
+
+#Video 3:
+Solidity Tutorial: Structure of Smart contract
+
+Basic syntax of Solidity programs (But the code is wrong// help me find the error?!!)
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.11;
+
+contract Mycontract {
+    uint a;
+    uint b;
+
+    function add() public view returns (uint) {
+        uint c;
+        c=a+b;
+        return c;
+    }
+}
+ABI: 
+[
+	{
+		"inputs": [],
+		"name": "add",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+
+Doubt// How to solve the Solidity Static Analysis Error for GAS COSTS: 
+Gas requirement of function Mycontract.add is infinite:
+If the gas requirement of a function is higher than the block gas limit, it cannot be executed.
+Please avoid loops in your functions or actions that modify large areas of storage
+(this includes clearing or copying arrays in storage)
+Pos: 8:4:
