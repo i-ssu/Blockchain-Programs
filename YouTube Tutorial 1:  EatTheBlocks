@@ -46,3 +46,76 @@ If the gas requirement of a function is higher than the block gas limit, it cann
 Please avoid loops in your functions or actions that modify large areas of storage
 (this includes clearing or copying arrays in storage)
 Pos: 8:4:
+
+
+#Video 4:
+Solidity Tutorial: Variable types
+
+pragma solidity ^0.8.11;
+
+contract Mycontract {
+    //1. Fixed-sized types: these types occuppy a fix size in memory;
+
+    bool isReady; //true/false
+    uint a;//you can only hold positive numbers it has to be integer cannot be float or character type like 1, 2, 3, 4, 5 etc
+    address recipients; //to represent ethereum addresses, to declare the address of the recipients, if you want to declare ether or tokens. Need to know in order to interact with another smart contract or recipient of financial address
+    bytes32 data; //any arbitrary binary data. any series of byte that represents some data can be used with this variable
+    
+
+
+    
+    //2. Variable-sized types: these are bit more complex and hold data of a variable of defined length
+    string name; // string of any length however we cannot manipulate strings in Solidity. can be used to represent the byte32 data (dont know why)
+    bytes _data;//generalisation of the bytes32 type arbitrary data, also used to represent any kind of binary data but contrary to bytes32 these does not have a predefined length
+    uint[] amounts; //contrary to Java acript an Array of have to be an array of same types, hence its less flexible than JVS
+    mapping(uint => string) //users; users[10] => 'somestring'// mappings are associated array they have keys and value pairs just like dictionaries in Python here key can be a variable of a certain datatype say uint and say the value is of string type. Then we define the name of the mapping say users
+    
+
+    //3. User-defined data  types: customisation of a data, add more dynamics to it is then you use this data types
+    struct User{
+        uint id;
+        string name;
+        uint[] friendIds;
+        }// inside a struct you define different fields ed:
+        // struct is similar to a JVS object but the difference is that the mapping before is that the User struct dont have a container
+        //you have to instantiate a single user but after defining it you need to put the "User" somewhere like in the container like in mapping or array.
+    enum Color {
+        RED,
+        GREEN,
+        BLUE
+    } //good to represent some option define it using enum keyword and then after you name struct. We use enums for labels for eg: someone use smart contracts then someone can use color red then use the notation:
+    Color.RED, Color.GREEN
+
+
+}
+
+#Video 5:
+Solidity Tutorial: Declaring a function
+
+pragma solidity ^0.5.11;
+
+contract MyContract {
+    uint value;
+
+    function getValue() external view returns(uint) {
+        return value;
+    } 
+
+    function setValue(uint _value) external {
+        value=_value;
+    }
+    //in order to deploy the contractwe click on the Deploy and Run trasactions on the left and you gonna deploy and run transaction. 
+    // Environment- this is aligned to define where you wnatto deploy your smart contract. you can deploy your smart contract on real ethereum network called mainnet 
+    //Mainnet you use real ethereum network. On this network people use real ether and basically everything that is done  in this network is equivalent of the production . So when you develop a smart contract you dont require a mainnet, BECAUSE FIRST IS THAT IT COSTS MONEY AND THE SECOND THING IS THAT IT CAN HAVE A LOT OF real life CONSEQUENCES. instead when you develop a smart contract you wanna have a safe books isolated env where you can make it stay without any consequences and in order to do that you need to setup a local ethereum netwrok that can only run on your computer it can be a little more bit of complex to setup this local development blockchain yourself but fortunately remix does it for us already.
+    //The option we select in enviroment for our smart contracts will be local ethereum smart contrct will be the Javascript VM 
+    //In the accounts there is a ethereum blockchain the concept of ethereum address- irrespective if you are a human or smart contract everybody is identified by ethereum addresses. these are identified by to public key cryptography schema
+
+
+}
+
+#Video 6:
+Solidity Tutorial: Deploying a smart contract with Remix
+
+
+
+
