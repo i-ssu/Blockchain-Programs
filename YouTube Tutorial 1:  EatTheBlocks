@@ -116,6 +116,42 @@ contract MyContract {
 #Video 6:
 Solidity Tutorial: Deploying a smart contract with Remix
 
+pragma solidity ^0.5.11;
 
+contract MyContract {
+    uint value;
+
+    function getValue() external view returns(uint) {
+        return value;
+    } 
+
+    function setValue(uint _value) external {
+        value=_value;
+    }
+    //in order to deploy the contractwe click on the Deploy and Run trasactions on the left and you gonna deploy and run transaction. 
+    //Environment- this is aligned to define where you wnatto deploy your smart contract. you can deploy your smart contract on real ethereum network called mainnet 
+    //Mainnet you use real ethereum network. On this network people use real ether and basically everything that is done  in this network is equivalent of the production . So when you develop a smart contract you dont require a mainnet, BECAUSE FIRST IS THAT IT COSTS MONEY AND THE SECOND THING IS THAT IT CAN HAVE A LOT OF real life CONSEQUENCES. instead when you develop a smart contract you wanna have a safe books isolated env where you can make it stay without any consequences and in order to do that you need to setup a local ethereum netwrok that can only run on your computer it can be a little more bit of complex to setup this local development blockchain yourself but fortunately remix does it for us already.
+    //The option we select in enviroment for our smart contracts will be local ethereum smart contrct will be the Javascript VM 
+    //In the accounts there is a ethereum blockchain the concept of ethereum address- irrespective if you are a human or smart contract everybody is identified by ethereum addresses. these are identified by to public key cryptography schema
+    //On ethereum everytime you have to modify the data on blockchain you have to build a piece of data called a transaction. Transaction will tell us the changes that are made on the blockchain. This transaction will be signed using the private key that is associate with the ethereum addres. 
+    // When we deploy our smart contracts to the blockchain this is also called as a transaction so that means we have to make use of the ethereum address to deploy this contract we cannot.
+    // So in order to deploy our ethereum smart contract we need to make use of ethereum address
+    // After the deployment the smart contract will also have its own address which will not be contraolled by my private key 
+    // When we work on the local development blockchain of REmix, it automatically generated 5 to 10 unique address for your contract after its deployment in ethereum network. 
+    //If you click on the account dropdown then you can see the list of all the private addresses are generated with some ether. Because no matter if you want to deploy the smart contract or interact with smart contract we need to spend some of these ethers
+    //Where are the private addresses of these ethers?==>Basically Remix manages everything itself we dont have to describe it explicitely
+    //This is not real ether
+    // Gas Limit 
+    // Value
+    //Which contract to deploy
+    // Select Deploy
+    // A deployed instance of your smart contract may appear
+    // Addresses of all the deployed contracts are different from each other
+
+}
+
+
+#Video 7:
+Solidity Tutorial: Interacting with a smart Contract with Remix
 
 
