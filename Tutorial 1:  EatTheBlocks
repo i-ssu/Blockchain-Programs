@@ -61,16 +61,12 @@ contract Mycontract {
     address recipients; //to represent ethereum addresses, to declare the address of the recipients, if you want to declare ether or tokens. Need to know in order to interact with another smart contract or recipient of financial address
     bytes32 data; //any arbitrary binary data. any series of byte that represents some data can be used with this variable
     
-
-
-    
     //2. Variable-sized types: these are bit more complex and hold data of a variable of defined length
     string name; // string of any length however we cannot manipulate strings in Solidity. can be used to represent the byte32 data (dont know why)
     bytes _data;//generalisation of the bytes32 type arbitrary data, also used to represent any kind of binary data but contrary to bytes32 these does not have a predefined length
     uint[] amounts; //contrary to Java acript an Array of have to be an array of same types, hence its less flexible than JVS
     mapping(uint => string) //users; users[10] => 'somestring'// mappings are associated array they have keys and value pairs just like dictionaries in Python here key can be a variable of a certain datatype say uint and say the value is of string type. Then we define the name of the mapping say users
     
-
     //3. User-defined data  types: customisation of a data, add more dynamics to it is then you use this data types
     struct User{
         uint id;
@@ -85,8 +81,6 @@ contract Mycontract {
         BLUE
     } //good to represent some option define it using enum keyword and then after you name struct. We use enums for labels for eg: someone use smart contracts then someone can use color red then use the notation:
     Color.RED, Color.GREEN
-
-
 }
 
 #Video 5:
@@ -153,5 +147,6 @@ contract MyContract {
 
 #Video 7:
 Solidity Tutorial: Interacting with a smart Contract with Remix
+
 
 
